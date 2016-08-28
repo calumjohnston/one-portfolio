@@ -1,0 +1,463 @@
+/* there's an issue with the linking to page section (misaligned) - It would require veeeery hacky CSS, or just some HTML edits to fix. */
+
+body{
+    background: white;
+    padding:0;
+    margin:0;
+    font-family:Open Sans;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+/* H1 styling */
+h1{
+    margin:0;
+    padding:0;
+}
+h1.logo{
+    display:flex;
+}
+h1.logo a{
+    justify-content:center;
+    align-items:center;
+    line-height:70px;
+    font-family:Helvetica;
+    font-weight:100;
+    font-size:13px;
+    letter-spacing: 1.2pt;
+    color:#fbc93d;
+}
+
+/* NAVBAR STYLING */
+nav{
+    background:#222;
+    color:#999;
+    text-transform:uppercase;
+    position:fixed;
+    width:100vw;
+    z-index:5;
+}
+
+nav .inner{
+    display:flex;
+    margin:0 30px;
+    flex-direction:row;
+    list-style-image:none;
+    justify-content: space-between;
+    
+}
+ul.nav{
+    display:flex; 
+    margin:0;
+    padding:0;
+
+}
+ul.nav li{
+    list-style-type: none;
+    display:flex;
+
+}
+ul.nav li a{
+    font-size:13px;
+    padding:20px 20px;
+    line-height:30px;
+    justify-content:center;
+    align-items:center;
+    -moz-box-sizing:border-box;
+   -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    height:70px;
+
+}
+ul.nav li a:hover{
+    color:#fbc93d;
+    border-bottom:3px solid #fbb93d;
+    background-color:#222;
+}
+
+/* Hide home section */
+#home .inner .section-title{
+    display:none;
+}
+/* --- */
+
+#home .inner .section-title h1{
+    margin:0;
+    color:#999;
+    font-family:Open Sans;
+    font-size:13px;
+    font-weight:200;
+    text-transform: uppercase;
+    padding-right:30px;
+
+}
+
+.header{
+    margin:0;
+    padding-top:70px;
+    height:93vh;
+    background:url("http://i.imgur.com/NhtbmPx.png");
+    background-size:cover;
+    background-position: 100% 98%; 
+    color:#222;
+    display:flex;
+    justify-content: flex-start;
+    flex-wrap:wrap;
+    align-content: center;
+}
+.hero-unit{
+    margin:0 30px;
+    display:flex;
+    flex-direction:column;
+    cursor:default;
+}
+
+.hero-unit h1{
+    font-size:12vh;
+    max-width:60vw;
+    min-width:645px;
+    text-transform: uppercase;
+}
+.hero-unit p{
+    margin-bottom:40px;
+    max-width:450px;
+    color:#555;
+    font-size:24px;
+    font-weight:200;
+    letter-spacing:1px;
+    line-height:32px;
+}
+.hero-unit .btn{
+    border:1px solid #222;
+    border-radius:4px;
+    font-size:24px;
+    padding:8px 15px;
+    background:#222;
+    color:#fbc93d;
+    transition:all 0.2s ease;
+
+}
+.hero-unit .btn:hover{
+    background:none;
+    color:#222;
+
+}
+
+/* Hiding arrow-down */
+.arrow-down{
+    display:none;
+}
+/*---*/
+
+/* Section styles */
+#introduction .section-title, #portfolio .section-title{
+    color:#fbc93d;
+    background-color:#222;
+    padding:10px 0px;
+    
+}
+.about .section-title{
+    color:#6A9A1F;
+    background-color:#222;
+    padding:10px 0px;
+}
+#portfolio .section-title,.contact .section-title{
+    background-color:#fbc93d;
+    color:#222;
+    padding:20px 0px;
+}
+
+/* Section padding of viewport-width for responsiv..ity? */
+/* P tags*/
+#introduction .section-title p, #portfolio .section-title p, .about .section-title p, .contact .section-title p{
+    margin-top:0;
+    font-size:13px;
+    padding-left:17.5vw;
+}
+/* h1 tags*/
+#introduction .section-title h1, #portfolio .section-title h1, .about .section-title h1,.contact .section-title h1{
+    font-weight:600;
+    letter-spacing:1.3pt;        
+    text-transform: uppercase;
+    font-size:72px;
+    padding-left:17.5vw;
+}
+/* drop shadow */
+.thumbnail{
+    -webkit-box-shadow: 0 10px 6px -6px #222;
+    -moz-box-shadow: 0 10px 6px -6px #222;
+    box-shadow: 0 10px 6px -6px #222;
+}
+ul.thumbnails{
+    padding:0 20px;
+    margin:0 auto;
+    margin-top:0;
+    max-width:65vw;
+}
+
+/* Grabbing individual elements to fix padding */
+#portfolio > div > div.section-content.row-fluid{
+    padding-top:40px;
+    padding-bottom:40px;
+}
+#portfolio > div > div.item > ul{
+    padding-top:60px;
+}
+.portfolio .inner .section-content,.item{
+    display:flex;
+    justify-content:center;
+    background-color:#232B2B;
+}
+.item{
+    background-color:#fbb93d;
+}
+.section-content .services{
+    display:flex;
+    justify-content: space-between;
+    padding:0;
+    margin:0 auto;
+    margin-top:30px;
+    margin-bottom:30px;
+    max-width:65vw;
+
+}
+.section-content .services h2{
+    background-color:#fbc93d;
+    margin:0;
+    padding:10px 10px;
+    font-weight:200;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+.section-content .services .content{
+    padding:10px 20px;
+    font-size:14px;
+}
+.section-content .services li{
+    list-style:none;
+    padding:0 0 30px 0;
+    border-bottom:1px solid #999;
+    border-radius:3px;
+    flex-grow: 1;
+}
+
+/* Nth-child used to get middle block */
+.section-content .services li:nth-child(2) h2{
+    background-color:#fbb93d;
+}
+.section-content .thumbnails{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+.section-content .thumbnails li,.item .thumbnails li{
+    list-style:none;
+    margin:10px 10px 30px 10px;
+}
+
+/* Media object gap Fix */
+.screenshot{
+    height:185px;
+}
+.show-popup img{
+    height:185px;
+}
+/*--*/
+
+
+.section-content .thumbnails li h2,.item .thumbnails li h2{
+    text-align:center;
+    background-color:#dc4d1f;
+    color:#ffffff;
+    font-size:16px;
+    letter-spacing:1.5pt;
+    text-transform: uppercase;
+    font-weight:400;
+    margin-top:0;
+    margin:0;
+    padding:10px 0;
+}
+.section-content .thumbnails li p,.item .thumbnails p{
+    color:#eee;
+    background-color:#e25d33;
+    margin:0;
+    padding:10px 10px;
+    text-align:center;
+    font-size:12px;
+    font-weight:200;
+}
+.item .thumbnails{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    margin-bottom:70px;
+}
+
+/*----- Teams section styles ---- */
+
+
+/* Media Object Gap Fix */
+.team li.profile .thumbnail a img{
+    transform: translateY(10px);
+}
+.social-inline{
+    display: none!important;
+}
+/*--*/
+
+#team .section-content .section-description{
+    display:none;
+    margin:0 auto;
+    margin-top:30px;
+    font-size:14px;
+    background-color:#eee;
+    max-width:800px;
+    padding:20px;
+    border-radius:5px;
+}
+.team{
+    background-color:#232B2B;
+}
+.team ul.thumbnails{
+    padding:30px;
+    display:flex;
+    justify-content: space-between;
+    margin-top:0;
+}
+.team ul{
+    display:flex;
+    justify-content: space-between;
+}
+.team li.profile{
+    max-width:240px; 
+}
+
+
+/* Media Object - ANIMATIONS using scale on hover - z-index to fix overlap issue with header */
+.thumbnail{
+    transition:all 100ms ease-in-out;
+}
+.thumbnail:hover{
+    transform: scale(1.05);
+    box-shadow: 0 5px 30px -5px #222;
+    z-index:2;
+}
+
+/* Profile block styles */
+.team li.profile p:nth-child(2),.team li.profile p:nth-child(3){
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:1.5pt;
+    background-color:#6A9A1F;
+}
+.team li.profile p:nth-child(3){
+    background-color:#79af23;
+    text-transform: none;
+    letter-spacing:1.2pt;
+    padding:20px 20px;
+    text-align:left;
+    min-height:102px;
+}
+
+.team li.profile h3{
+    margin:0;
+    padding:20px;
+    text-align: center;
+    background-color:#4d7016;
+    color:#eee;
+    text-transform: uppercase;
+    font-size:16px;
+    font-weight:200;
+
+}
+
+/* CONTACT */
+.contact .info{
+    background-color:#232B2B;
+}
+.contact .info p{
+    margin:0;
+    padding:40px 0px;
+    color:#eee;
+    width:720px;
+    padding-left:17.5vw;
+    font-weight:200;
+    font-size:16px;
+    line-height:22px;
+    letter-spacing:1.1pt;
+}
+.contact address{
+    color:white;
+    margin-left:17.5vw;
+    padding-left:30px;
+    font-size:32px;
+    color:#fbb93d;
+    border-left:2px solid #fbb93d;
+}
+.contact address:nth-child(2){
+    padding-bottom:40px;
+}
+
+/* MAP */
+.map{
+    background-color:#232B2B;
+    transition:all 200ms ease
+}
+.map iframe{
+    max-width:100%;
+    width:100vw;
+    opacity:0.5;
+}
+.map iframe:hover{
+    opacity:1;
+}
+
+/* FOOTER */
+
+footer{
+    display:flex;
+    justify-content:center;
+    background-color: #222;
+    color:#999;
+    height:80px;
+}
+footer .inner{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex: 1;
+    margin-left:30px;
+}
+.footer-content{
+    letter-spacing:1.2pt;
+    font-size:12px;
+    text-transform: uppercase;
+}
+.scroll-top{
+    display:none;
+}
+footer ul{
+    display:flex;
+    justify-content: space-around;
+
+    margin:0;
+    padding:0;
+}
+footer ul li{
+    list-style:none;
+    font-size:12px;
+    text-transform: uppercase;
+}
+footer ul li a{
+    box-sizing:border-box;
+    padding:0px 30px;
+    height:80px;
+    display:flex;
+    align-items:center;
+}
+footer ul li a:hover{
+    border-bottom:2px solid #fbb93d;
+}
